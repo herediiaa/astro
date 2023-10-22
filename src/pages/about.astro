@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css'
 const pageTitle = "About Page"
 const person = {
   name: "Emmanuel",
@@ -9,6 +10,9 @@ const person = {
 const skills = ['leer', 'hablar', 'electronica', 'saltar']
 
 const number = 1;
+const color = "red"
+const size = "50px"
+const colorP = "purple"
 ---
 
 <html lang="en">
@@ -36,10 +40,19 @@ const number = 1;
       <li>vivo en {person.country} </li>
       <li> y mis hobies son: </li>
       <ul>
-        { person.hobbies.length >= 1 && person.hobbies.map((hobbie) => <li>{hobbie}</li>)}
+        { person.hobbies.length >= 1 && person.hobbies.map((hobbie) => <li class="skill">{hobbie}</li>)}
       </ul>
     </ul>
     {number >= 8 ? <p>tengo mas de 8</p> : <p>tengo menos de 8</p>}
 
   </body>
 </html>
+<style define:vars={{color,size,colorP}}>
+  h1{
+    color: var(--colorP);
+    font-size: var(--size)
+  }
+  .skill{
+    color: var(--color);
+  }
+</style>
