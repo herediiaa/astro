@@ -1,4 +1,6 @@
 ---
+import Navigation from '../components/Navigation.astro'
+import Footer from '../components/Footer.astro'
 import '../styles/global.css'
 const pageTitle = "About Page"
 const person = {
@@ -24,14 +26,7 @@ const colorP = "purple"
     <title>{pageTitle}</title>
   </head>
   <body>
-    <nav class="flex gap-2">
-        
-            <a href="/">inicio</a>
-            <a href="/about">about</a>
-            <a href="/blog">blog</a>
-
-        
-    </nav>
+  <Navigation/>
     <h1>{pageTitle}</h1>
     <p>aca algunos datos sobre mi</p>
     <ul>
@@ -45,7 +40,9 @@ const colorP = "purple"
     </ul>
     {number >= 8 ? <p>tengo mas de 8</p> : <p>tengo menos de 8</p>}
 
+    <Footer/>
   </body>
+
 </html>
 <style define:vars={{color,size,colorP}}>
   h1{

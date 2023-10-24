@@ -1,0 +1,14 @@
+---
+const {siteName, user} = Astro.props;
+
+---
+
+<a target="blank_" href={`https://www.${siteName}.com/${user}`}>{siteName}</a>
+<style>
+    a {
+      padding: 0.5rem 1rem;
+      color: white;
+      background-color: #4c1d95;
+      text-decoration: none;
+    }
+  </style>
